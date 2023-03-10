@@ -3,6 +3,9 @@ import axios from "axios";
 const Axios = axios.create({
     baseURL: 'http://localhost:5000/api/',
 });
+Axios.defaults.headers.common["Accept"] = "application/json";
+Axios.defaults.headers.common["Authorization"] = 'auth token';
+Axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 Axios.interceptors.request.use((request) => {
     document.querySelector(".loading-bg").style.display = "flex";

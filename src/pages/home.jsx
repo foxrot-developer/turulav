@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from '../component/layout/header';
 import FooterSection from '../component/layout/footer';
 import BannerSection from '../component/section/banner'; 
@@ -11,8 +11,8 @@ import GroupSection from '../component/section/group';
 import ClientSection from '../component/section/clints';
 import AppsSection from '../component/section/apps';
 
-class HomePages extends Component {
-    render() {
+function HomePages () {
+    
         return (
             <div>
                 <Header />
@@ -29,6 +29,6 @@ class HomePages extends Component {
             </div>
         );
     }
-}
+
 
 export default HomePages;

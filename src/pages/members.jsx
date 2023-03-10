@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
 import AppsSection from '../component/section/apps';
@@ -7,8 +7,8 @@ import MemberItemTwo from '../component/items/memberitemtwo';
 import PaginaTion from '../component/section/pagination';
 
 
-class MembersPage extends Component {
-    render() {
+function MembersPage () {
+    
         return (
             <div>
                 <Header />
@@ -130,6 +130,6 @@ class MembersPage extends Component {
             </div>
         );
     }
-}
+
 
 export default MembersPage;

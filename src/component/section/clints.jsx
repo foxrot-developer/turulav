@@ -51,9 +51,8 @@ let ClientsListContent =[
 
 
 
-class ClientSection extends Component {
-    state = {  } 
-    render() { 
+function ClientSection (){
+    
         return (
             <section className="clints-section padding-tb">
                 <div className="container">
@@ -97,6 +96,6 @@ class ClientSection extends Component {
             </section>
         );
     }
-}
+
  
 export default ClientSection;

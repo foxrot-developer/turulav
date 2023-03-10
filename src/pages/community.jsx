@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
 import FooterSection from '../component/layout/footer';
 import GroupItemThree from '../component/items/groupitemthree';
 import Pagination from '../component/section/pagination';
-
-class CommunityPage extends Component {
-    render() {
+function CommunityPage () {
+    
         return (
             <div>
                 <Header />
@@ -40,6 +39,6 @@ class CommunityPage extends Component {
             </div>
         );
     }
-}
+
 
 export default CommunityPage;

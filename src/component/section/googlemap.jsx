@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class GoogleMap extends Component {
-    render() {
+function GoogleMap () {
+   
         return (
             <div className="contact-bottom">
                 <div className="contac-bottom">
@@ -18,6 +18,6 @@ class GoogleMap extends Component {
             </div>
         );
     }
-}
+
 
 export default GoogleMap;

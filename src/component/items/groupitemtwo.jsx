@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import {Link} from 'react-router-dom';
 
 
@@ -400,9 +400,10 @@ let GrouoListContent = [
         ]
     },
 ]
-class GroupItemTwo extends Component {
-    render() { 
-        const GroupList = GrouoListContent.slice(0 , this.props.itemNumber);
+function GroupItemTwo (props) {
+    
+        const GroupList = GrouoListContent.slice(0 , props.itemNumber);
+    
         return (
             <Fragment>
                 {GroupList.map((val, i) => (
@@ -438,6 +439,6 @@ class GroupItemTwo extends Component {
             </Fragment>
         );
     }
-}
+
  
 export default GroupItemTwo;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
 import FooterSection from '../component/layout/footer';
@@ -117,8 +117,8 @@ let PricingListContent = [
     },
 ]
 
-class PricingPlanPage extends Component {
-    render() {
+function PricingPlanPage () {
+    
         return (
             <div>
                 <Header />
@@ -165,6 +165,6 @@ class PricingPlanPage extends Component {
             </div>
         );
     }
-}
+
 
 export default PricingPlanPage;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
@@ -8,9 +8,8 @@ import WidgetLikeSection from '../component/section/widgetlike';
 import WidgetGroupSection from '../component/section/widgetgroup';
 import AllPhotos from '../component/section/photos';
 import GroupItemTwo from '../component/items/groupitemtwo';
-
-class ProfilePage extends Component {
-    render() {
+function ProfilePage () {
+    
         return (
             <div>
                 <Header />
@@ -45,7 +44,7 @@ class ProfilePage extends Component {
                                         </div>
                                         <ul className="profile-contact">
                                             <li>
-                                                <a href="#">
+                                                <a href="/">
                                                     <div className="icon"><i className="icofont-user"></i></div>
                                                     <div className="text">
                                                         <p>Add Friends</p>
@@ -53,7 +52,7 @@ class ProfilePage extends Component {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="/">
                                                     <div className="icon"><i className="icofont-envelope"></i></div>
                                                     <div className="text">
                                                         <p>Public Message</p>
@@ -61,7 +60,7 @@ class ProfilePage extends Component {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="/">
                                                     <div className="icon"><i className="icofont-envelope"></i></div>
                                                     <div className="text">
                                                         <p>Private Message</p>
@@ -75,7 +74,7 @@ class ProfilePage extends Component {
                                 <div className="profile-item d-none">
                                     <div className="lab-inner">
                                         <div className="lab-thumb">
-                                            <a href="#"><img src="assets/images/profile/Profile.jpg" alt="profile" /></a>
+                                            <a href="/"><img src="assets/images/profile/Profile.jpg" alt="profile" /></a>
                                         </div>
                                         <div className="lab-content">
                                             <div className="profile-name">
@@ -92,7 +91,7 @@ class ProfilePage extends Component {
                                             </div>
                                             <ul className="profile-contact">
                                                 <li>
-                                                    <a href="#">
+                                                    <a href="/">
                                                         <div className="icon"><i className="icofont-user"></i></div>
                                                         <div className="text">
                                                             <p>Add Friends</p>
@@ -100,7 +99,7 @@ class ProfilePage extends Component {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                    <a href="/">
                                                         <div className="icon"><i className="icofont-envelope"></i></div>
                                                         <div className="text">
                                                             <p>Publice Message</p>
@@ -108,7 +107,7 @@ class ProfilePage extends Component {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                    <a href="/">
                                                         <div className="icon"><i className="icofont-envelope"></i></div>
                                                         <div className="text">
                                                             <p>Private Message</p>
@@ -141,15 +140,15 @@ class ProfilePage extends Component {
                                                 type="button" role="tab" aria-controls="media" aria-selected="false">Media <span
                                                     className="item-number">35</span></button>
                                             <div className="dropdown">
-                                                <a className="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                <a className="btn dropdown-toggle" href="/" role="button" id="dropdownMenuLink"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     More
                                                 </a>
 
                                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                    <li><a className="dropdown-item" href="#">Activity</a></li>
-                                                    <li><a className="dropdown-item" href="#">Privacy</a></li>
-                                                    <li><a className="dropdown-item" href="#">Block user</a></li>
+                                                    <li><a className="dropdown-item" href="/">Activity</a></li>
+                                                    <li><a className="dropdown-item" href="/">Privacy</a></li>
+                                                    <li><a className="dropdown-item" href="/">Block user</a></li>
                                                 </ul>
                                             </div>
 
@@ -219,7 +218,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -243,27 +242,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -281,7 +280,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -306,27 +305,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -343,7 +342,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -380,27 +379,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -409,7 +408,7 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                         </div>
                                                                         <div className="load-btn">
-                                                                            <a href="#" className="lab-btn">Load More Post <i
+                                                                            <a href="/" className="lab-btn">Load More Post <i
                                                                                     className="icofont-spinner"></i></a>
                                                                         </div>
                                                                     </div>
@@ -425,7 +424,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="thumb-content">
-                                                                                            <h6><a href="#">
+                                                                                            <h6><a href="/">
                                                                                                     William Smith
                                                                                                 </a>
                                                                                             </h6>
@@ -448,7 +447,7 @@ class ProfilePage extends Component {
                                                                                             placeholder="Whats on your mind. William?" />
                                                                                         <div className="content-type">
                                                                                             <ul className="content-list">
-                                                                                                <li className="text"><a href="#">
+                                                                                                <li className="text"><a href="/">
                                                                                                         <i className="icofont-edit"></i>
                                                                                                         Text
                                                                                                     </a></li>
@@ -485,7 +484,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -509,27 +508,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -547,7 +546,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -576,27 +575,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -613,7 +612,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -638,27 +637,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -675,7 +674,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -712,27 +711,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -741,7 +740,7 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                         </div>
                                                                         <div className="load-btn">
-                                                                            <a href="#" className="lab-btn">Load More Post <i
+                                                                            <a href="/" className="lab-btn">Load More Post <i
                                                                                     className="icofont-spinner"></i></a>
                                                                         </div>
                                                                     </div>
@@ -757,7 +756,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -786,27 +785,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -823,7 +822,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -860,27 +859,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -889,7 +888,7 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                         </div>
                                                                         <div className="load-btn">
-                                                                            <a href="#" className="lab-btn">Load More Post <i
+                                                                            <a href="/" className="lab-btn">Load More Post <i
                                                                                     className="icofont-spinner"></i></a>
                                                                         </div>
                                                                     </div>
@@ -905,7 +904,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -942,27 +941,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -979,7 +978,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -1003,27 +1002,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -1041,7 +1040,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -1066,27 +1065,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -1095,7 +1094,7 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                         </div>
                                                                         <div className="load-btn">
-                                                                            <a href="#" className="lab-btn">Load More Post <i
+                                                                            <a href="/" className="lab-btn">Load More Post <i
                                                                                     className="icofont-spinner"></i></a>
                                                                         </div>
                                                                     </div>
@@ -1110,7 +1109,7 @@ class ProfilePage extends Component {
                                                                                                 alt="img" />
                                                                                         </div>
                                                                                         <div className="author-details">
-                                                                                            <h6><a href="#">William Smith</a></h6>
+                                                                                            <h6><a href="/">William Smith</a></h6>
                                                                                             <ul className="post-status">
                                                                                                 <li className="post-privacy"><i
                                                                                                         className="icofont-world"></i>
@@ -1135,27 +1134,27 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                             <div className="post-meta">
                                                                                 <div className="post-meta-top">
-                                                                                    <p><a href="#"><i className="icofont-like"></i> <i
+                                                                                    <p><a href="/"><i className="icofont-like"></i> <i
                                                                                                 className="icofont-heart"></i> <i
                                                                                                 className="icofont-laughing"></i>
                                                                                             <span>Julia,
                                                                                                 Petrova and 306 like this</span></a>
                                                                                     </p>
                                                                                     <p>
-                                                                                        <a href="#">136 Comments</a>
+                                                                                        <a href="/">136 Comments</a>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="post-meta-bottom">
                                                                                     <ul className="react-list">
-                                                                                        <li className="react"><a href="#"><i
+                                                                                        <li className="react"><a href="/"><i
                                                                                                     className="icofont-like"></i>
                                                                                                 Like</a> </li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i
                                                                                                     className="icofont-speech-comments"></i>
                                                                                                 Comment
                                                                                             </a></li>
-                                                                                        <li className="react"><a href="#">
+                                                                                        <li className="react"><a href="/">
                                                                                                 <i className="icofont-share"></i> Share
                                                                                             </a>
                                                                                         </li>
@@ -1164,7 +1163,7 @@ class ProfilePage extends Component {
                                                                             </div>
                                                                         </div>
                                                                         <div className="load-btn">
-                                                                            <a href="#" className="lab-btn">Load More Post <i
+                                                                            <a href="/" className="lab-btn">Load More Post <i
                                                                                     className="icofont-spinner"></i></a>
                                                                         </div>
                                                                     </div>
@@ -1815,7 +1814,7 @@ class ProfilePage extends Component {
                                                                                 </div>
                                                                             </div>
                                                                             <div className="load-btn">
-                                                                                <a href="#" className="lab-btn">Load More<i
+                                                                                <a href="/" className="lab-btn">Load More<i
                                                                                         className="icofont-spinner"></i></a>
                                                                             </div>
                                                                         </div>
@@ -1841,7 +1840,7 @@ class ProfilePage extends Component {
                                                                                 <div className="col-lg-4 col-sm-6">
                                                                                     <div className="album text-center">
                                                                                         <div className="album-thumb">
-                                                                                            <a href="#">
+                                                                                            <a href="/">
                                                                                                 <img src="assets/images/member/02.jpg"
                                                                                                     alt="album" />
                                                                                             </a>
@@ -1855,7 +1854,7 @@ class ProfilePage extends Component {
                                                                                 <div className="col-lg-4 col-sm-6">
                                                                                     <div className="album text-center">
                                                                                         <div className="album-thumb">
-                                                                                            <a href="#">
+                                                                                            <a href="/">
                                                                                                 <img src="assets/images/member/03.jpg"
                                                                                                     alt="album" />
                                                                                             </a>
@@ -1869,7 +1868,7 @@ class ProfilePage extends Component {
                                                                                 <div className="col-lg-4 col-sm-6">
                                                                                     <div className="album text-center">
                                                                                         <div className="album-thumb">
-                                                                                            <a href="#">
+                                                                                            <a href="/">
                                                                                                 <img src="assets/images/member/06.jpg"
                                                                                                     alt="album" />
                                                                                             </a>
@@ -1883,7 +1882,7 @@ class ProfilePage extends Component {
                                                                                 <div className="col-lg-4 col-sm-6">
                                                                                     <div className="album text-center">
                                                                                         <div className="album-thumb">
-                                                                                            <a href="#">
+                                                                                            <a href="/">
                                                                                                 <img src="assets/images/member/08.jpg"
                                                                                                     alt="album" />
                                                                                             </a>
@@ -1897,7 +1896,7 @@ class ProfilePage extends Component {
 
                                                                             </div>
                                                                             <div className="load-btn">
-                                                                                <a href="#" className="lab-btn">Load More<i
+                                                                                <a href="/" className="lab-btn">Load More<i
                                                                                         className="icofont-spinner"></i></a>
                                                                             </div>
                                                                         </div>
@@ -2006,7 +2005,7 @@ class ProfilePage extends Component {
                                                                                 </div>
                                                                             </div>
                                                                             <div className="load-btn">
-                                                                                <a href="#" className="lab-btn">Load More<i
+                                                                                <a href="/" className="lab-btn">Load More<i
                                                                                         className="icofont-spinner"></i></a>
                                                                             </div>
                                                                         </div>
@@ -2036,7 +2035,7 @@ class ProfilePage extends Component {
                                                                                 </div>
                                                                             </div>
                                                                             <div className="load-btn">
-                                                                                <a href="#" className="lab-btn">Load More<i
+                                                                                <a href="/" className="lab-btn">Load More<i
                                                                                         className="icofont-spinner"></i></a>
                                                                             </div>
                                                                         </div>
@@ -2066,7 +2065,7 @@ class ProfilePage extends Component {
                                                                                 </div>
                                                                             </div>
                                                                             <div className="load-btn">
-                                                                                <a href="#" className="lab-btn">Load More<i
+                                                                                <a href="/" className="lab-btn">Load More<i
                                                                                         className="icofont-spinner"></i></a>
                                                                             </div>
                                                                         </div>
@@ -2097,6 +2096,6 @@ class ProfilePage extends Component {
             </div>
         );
     }
-}
+
 
 export default ProfilePage;

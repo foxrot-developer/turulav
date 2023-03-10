@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 
 const title = "You’re Just 3 Steps Away From A Great Date";
@@ -31,9 +31,9 @@ let WorkListContent = [
     },
 ]
 
-class WorkSection extends Component {
-    state = {  } 
-    render() { 
+function WorkSection (){
+    
+    
         return (
             <section className="work-section padding-tb">
                 <div className="container">
@@ -73,6 +73,6 @@ class WorkSection extends Component {
             </section>
         );
     }
-}
+
  
 export default WorkSection;

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const title = "Filter Search Member";
 const desc = "Serious Dating With TuruLav Your Perfect Match is Just a Click Away.";
 
-class FilterSearchSection extends Component {
-    render() {
+function FilterSearchSection (){
+    
         return (
             <div>
                 <div className="widget search-widget">
@@ -123,6 +123,6 @@ class FilterSearchSection extends Component {
             </div>
         );
     }
-}
+
 
 export default FilterSearchSection;

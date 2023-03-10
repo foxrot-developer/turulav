@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 const bannertitle = "Introducing TuruLav";
 const bannerdesc = <p>Serious Dating With <strong>TuruLav </strong> Your Perfect Match is Just a Click Away.</p>;
 
-class BannerSection extends Component {
-    state = {}
-    render() {
+function BannerSection () {
+    
+    
         return (
             <section className="banner-section">
                 <div className="container">
@@ -119,6 +119,6 @@ class BannerSection extends Component {
             </section>
         );
     }
-}
+
 
 export default BannerSection;

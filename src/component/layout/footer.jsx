@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 
 const posttitle = "our Recent news";
@@ -29,14 +29,12 @@ let RecentPostList = [
     },
 ]
 
-class FooterSection extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            newsEmail: '',
-        };
-    }
-    render() {
+function FooterSection () {
+    
+    const[newsEmail ,setNewsEmail] = ('');
+    const handleNewsEmailChange = (event) => {
+        setNewsEmail(event.target.value);
+      };
         
         return (
             <footer className="footer-section">
@@ -142,8 +140,8 @@ class FooterSection extends Component {
                                                         name="email"
                                                         id="item01"
                                                         className="form-control"
-                                                        value={this.state.newsEmail}
-                                                        onChange={(e)=>{this.setState({newsEmail: e.target.value});}}
+                                                        value={newsEmail}
+                                                        onChange={handleNewsEmailChange}
                                                         placeholder="Enter Your email *" 
                                                     />      
                                                 </div>
@@ -170,6 +168,6 @@ class FooterSection extends Component {
             </footer>
         );
     }
-}
+
 
 export default FooterSection;

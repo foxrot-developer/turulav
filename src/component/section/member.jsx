@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import MemberItem from '../items/memberitem';
 
@@ -7,8 +7,8 @@ const title = "New Members in London";
 const subtitle = "Meet New People Today!";
 
 
-class MemberSection extends Component {
-    render() { 
+function MemberSection (){
+     
         return (
             <section className="member-section padding-tb">
                 <div className="container">
@@ -29,6 +29,6 @@ class MemberSection extends Component {
             </section>
         );
     }
-}
+
  
 export default MemberSection;

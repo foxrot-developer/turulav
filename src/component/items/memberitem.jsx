@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 let AllMemberListContent = [
@@ -41,9 +41,9 @@ let AllMemberListContent = [
 ]
 
 
-class MemberItem extends Component {
-    render() { 
-        const MemberCountItem = AllMemberListContent.slice(0 , this.props.itemNumber);
+function MemberItem (props) {
+    
+        const MemberCountItem = AllMemberListContent.slice(0 , props.itemNumber);
         return (
             <Fragment>
                 {MemberCountItem.map((val, i) => (
@@ -67,6 +67,6 @@ class MemberItem extends Component {
             </Fragment>
         );
     }
-}
+
  
 export default MemberItem;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
 import FooterSection from '../component/layout/footer';
@@ -38,19 +38,22 @@ let ContactInfoList = [
     },
 ]
 
-class ContactPage extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            contactName: '',
-            contactEmail: '',
-            contactSubject: '',
-            contactNumber: '',
-            contactMassage: '',
-        };
-    }
+function ContactPage () {
+  const [contactName, setContactName] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [contactSubject, setContactSubject] = useState('');
+  const [contactNumber, setContactNumber] = useState('');
+  const [contactMassage, setContactMessage] = useState('');
 
-    render() {
+  const handleNameChange = (event) => {
+    setContactName(event.target.value);
+    setContactEmail(event.target.value);
+    setContactSubject(event.target.value);
+    setContactNumber(event.target.value);
+    setContactMessage(event.target.value);
+  };
+
+    
         return (
             <div>
                 <Header />
@@ -69,32 +72,32 @@ class ContactPage extends Component {
                                                     type="text"
                                                     name="name"
                                                     id="item01"
-                                                    value={this.state.contactName}
-                                                    onChange={(e)=>{this.setState({contactName: e.target.value});}}
+                                                    value={contactName}
+                                                    onChange={handleNameChange}
                                                     placeholder="Your Name *"
                                                 />
                                                 <input
                                                     type="text"
                                                     name="email"
                                                     id="item02"
-                                                    value={this.state.contactEmail}
-                                                    onChange={(e)=>{this.setState({contactEmail: e.target.value});}}
+                                                    value={contactEmail}
+                                                    onChange={handleNameChange}
                                                     placeholder="Your Email *"
                                                 />
                                                 <input
                                                     type="text"
                                                     name="subject"
                                                     id="item03"
-                                                    value={this.state.contactSubject}
-                                                    onChange={(e)=>{this.setState({contactSubject: e.target.value});}}
+                                                    value={contactSubject}
+                                                    onChange={handleNameChange}
                                                     placeholder="Your Subject *"
                                                 />
                                                 <input
                                                     type="text"
                                                     name="number"
                                                     id="item04"
-                                                    value={this.state.contactNumber}
-                                                    onChange={(e)=>{this.setState({contactNumber: e.target.value});}}
+                                                    value={contactNumber}
+                                                    onChange={handleNameChange}
                                                     placeholder="Mobile Number *"
                                                 />
                                                 <textarea 
@@ -102,8 +105,8 @@ class ContactPage extends Component {
                                                     type="text"
                                                     id="item05"
                                                     name="message"
-                                                    value={this.state.respondMassage}
-                                                    onChange={(e)=>{this.setState({respondMassage: e.target.value});}}
+                                                    value={contactMassage}
+                                                    onChange={handleNameChange}
                                                     placeholder="Your Message"
                                                 ></textarea>
                                                 <button type="submit" className="lab-btn"><span>{btnText}</span></button>
@@ -146,6 +149,6 @@ class ContactPage extends Component {
             </div>
         );
     }
-}
+
 
 export default ContactPage;

@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import React,{useState,useRef} from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 const contactnumber = "+800-123-4567 6587";
 const location = "Beverley, New York 224 USA";
 
-class Header extends Component {
+function Header () {
 
-    menuTrigger() {
+    function menuTrigger() {
         document.querySelector('.menu').classList.toggle('active')
         document.querySelector('.header-bar').classList.toggle('active')
     }
-    menuTriggerTwo() {
+
+   
+
+    function menuTriggerTwo() {
         document.querySelector('.header-top').classList.toggle('open')
         // document.querySelector('.header-bar').classList.toggle('active')
     }
@@ -21,7 +24,7 @@ class Header extends Component {
 
     
     
-    render() {
+    
         window.addEventListener('scroll', function() {
             var value = window.scrollY;
             if (value > 200) {
@@ -61,19 +64,19 @@ class Header extends Component {
                                     </p>
                                 </li>
                                 <li>
-                                    <a href="#" className="fb"><i className="icofont-facebook-messenger"></i></a>
+                                    <a href="/" className="fb"><i className="icofont-facebook-messenger"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" className="twitter"><i className="icofont-twitter"></i></a>
+                                    <a href="/" className="twitter"><i className="icofont-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" className="vimeo"><i className="icofont-vimeo"></i></a>
+                                    <a href="/" className="vimeo"><i className="icofont-vimeo"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" className="skype"><i className="icofont-skype"></i></a>
+                                    <a href="/" className="skype"><i className="icofont-skype"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" className="rss"><i className="icofont-rss-feed"></i></a>
+                                    <a href="/" className="rss"><i className="icofont-rss-feed"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -94,7 +97,7 @@ class Header extends Component {
                                     </li>
 
                                     <li className="menu-item-has-children">
-                                        <a href="#" role="button" data-bs-toggle="dropdown"
+                                        <a href="/" role="button" data-bs-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false" data-bs-offset="0,10">Features</a>
                                         <ul className="submenu dropdown-menu">
                                             <li><NavLink to="/members">All Members</NavLink></li>
@@ -110,7 +113,7 @@ class Header extends Component {
                                         <NavLink to="/community">Community</NavLink>
                                     </li>
                                     <li className="menu-item-has-children">
-                                        <a href="#" role="button" data-bs-toggle="dropdown"
+                                        <a href="/" role="button" data-bs-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false" data-bs-offset="0,10">Blog</a>
                                         <ul className="submenu dropdown-menu">
                                             <li><NavLink to="/blog">Blog</NavLink></li>
@@ -122,12 +125,12 @@ class Header extends Component {
                                 <NavLink to="/login" className="login"><i className="icofont-user"></i> <span>LOG IN</span> </NavLink>
                                 <NavLink to="/signup" className="signup"><i className="icofont-users"></i> <span>SIGN UP</span> </NavLink>
 
-                                <div className="header-bar d-lg-none" onClick={this.menuTrigger}>
+                                <div className="header-bar d-lg-none" onClick={menuTrigger}>
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                 </div>
-                                <div className="ellepsis-bar d-lg-none" onClick={this.menuTriggerTwo}>
+                                <div className="ellepsis-bar d-lg-none" onClick={menuTriggerTwo}>
                                     <i className="icofont-info-square"></i>
                                 </div>
                             </div>
@@ -137,6 +140,6 @@ class Header extends Component {
             </header>
         );
     }
-}
+
 
 export default Header;

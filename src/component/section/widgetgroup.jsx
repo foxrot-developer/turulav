@@ -58,8 +58,7 @@ let WidgetGroupContentList = [
     },
 ]
 
-class WidgetGroupSection extends Component {
-    render() {
+function WidgetGroupSection () {
         return (
             <div className="widget active-group">
                 <div className="widget-inner">
@@ -94,6 +93,6 @@ class WidgetGroupSection extends Component {
             </div>
         );
     }
-}
+
 
 export default WidgetGroupSection;

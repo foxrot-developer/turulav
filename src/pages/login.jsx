@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
@@ -6,15 +6,24 @@ import FooterSection from '../component/layout/footer';
 
 const title = "Login";
 
-class LoginPage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            userName: '',
-            userPass: '',
-        };
-    }
-    render() {
+function LoginPage (){
+    
+    const [userName, setUserName] = useState('');
+    const [userPass, setUserPass] = useState('');
+  
+    const handleUserNameChange = (event) => {
+      setUserName(event.target.value);
+    };
+  
+    const handleUserPassChange = (event) => {
+      setUserPass(event.target.value);
+    };
+  
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      // handle form submission
+    };
+   
         return (
             <div>
                 <Header />
@@ -23,14 +32,14 @@ class LoginPage extends Component {
                     <div className=" container">
                         <div className="account-wrapper">
                             <h3 className="title">{title}</h3>
-                            <form className="account-form">
+                            <form className="account-form" onSubmit={handleSubmit}>
                                 <div className="form-group">
                                     <input
                                         type="text"
                                         name="name"
                                         id="item01"
-                                        value={this.state.userName}
-                                        onChange={(e) => { this.setState({ userName: e.target.value }); }}
+                                        value={userName}
+                                        onChange={handleUserNameChange}
                                         placeholder="User Name *"
                                     />
                                 </div>
@@ -39,8 +48,8 @@ class LoginPage extends Component {
                                         type="password"
                                         name="password"
                                         id="item02"
-                                        value={this.state.userPass}
-                                        onChange={(e) => { this.setState({ userPass: e.target.value }); }}
+                                        value={userPass}
+                                        onChange={handleUserPassChange}
                                         placeholder="Password *"
                                     />
                                 </div>
@@ -50,7 +59,7 @@ class LoginPage extends Component {
                                             <input type="checkbox" name="remember" id="remember" />
                                             <label htmlFor="remember">Remember Me</label>
                                         </div>
-                                        <a href="#">Forget Password?</a>
+                                        <a href="/">Forget Password?</a>
                                     </div>
                                 </div>
                                 <div className="form-group">
@@ -86,6 +95,5 @@ class LoginPage extends Component {
             </div>
         );
     }
-}
 
 export default LoginPage;

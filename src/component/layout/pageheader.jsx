@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-class PageHeader extends Component {
+function PageHeader (props) {
     
-    render() {
-        const {title} = this.props;
+   
+        const {title} = props;
         return (
             <section className="page-header-section style-1"  style={{ backgroundImage: "url(/assets/images/page-header.jpg)" }}>
                 <div className="container">
@@ -23,6 +23,6 @@ class PageHeader extends Component {
             </section>
         );
     }
-}
+
 
 export default PageHeader;

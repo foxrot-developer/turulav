@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
@@ -7,8 +7,7 @@ import FooterSection from '../component/layout/footer';
 const title = "Oops! This Page Not Found";
 const desc = "We are Really Sorry But the Page you Requested is Missing";
 
-class ForeZeroPage extends Component {
-    render() {
+function ForeZeroPage () {
         return (
             <div>
                 <Header />
@@ -33,6 +32,6 @@ class ForeZeroPage extends Component {
             </div>
         );
     }
-}
+
 
 export default ForeZeroPage;

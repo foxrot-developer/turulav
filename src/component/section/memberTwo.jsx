@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, { useState} from 'react';
 import {Link} from 'react-router-dom';
 
 
-class MemberTwoSection extends Component {
-    state = {  } 
-    render() { 
+function MemberTwoSection () {
+ 
         return (
             <section className="top-member-section padding-tb">
                 <div className="container">
@@ -304,6 +303,6 @@ class MemberTwoSection extends Component {
             </section>
         );
     }
-}
+
  
 export default MemberTwoSection;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const subTitle= "Download App Our Turulav";
 const Title = "Easy Connect to Everyone";
@@ -19,9 +19,9 @@ let AppListContent= [
     },
 ]
 
-class AppsSection extends Component {
-    state = {  } 
-    render() { 
+function AppsSection () {
+    
+    
         return (
             <section className="app-section bg-theme">
                 <div className="container">
@@ -57,6 +57,6 @@ class AppsSection extends Component {
             </section>
         );
     }
-}
+
  
 export default AppsSection;

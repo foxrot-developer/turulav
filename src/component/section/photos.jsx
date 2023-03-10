@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
-class AllPhotos extends Component {
-    render() {
+function AllPhotos () {
+    
         return (
             <div>
                 <div className="photo-title text-center border-radius-2 bg-theme p-1 mb-4">
@@ -135,6 +135,6 @@ class AllPhotos extends Component {
             </div>
         );
     }
-}
+
 
 export default AllPhotos;

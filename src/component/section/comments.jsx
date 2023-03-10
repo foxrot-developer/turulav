@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const title = "02 Comments";
 
@@ -21,8 +21,8 @@ let CommentList = [
     },
 ]
 
-class CommentSection extends Component {
-    render() {
+function CommentSection () {
+    
         return (
             <div id="comments" className="comments">
                 <div className="widget-title">
@@ -40,11 +40,11 @@ class CommentSection extends Component {
                             <div className="com-content">
                                 <div className="com-title">
                                     <div className="com-title-meta">
-                                        <h4><a href="#" rel="external nofollow" className="url">{val.comName}</a></h4>
+                                        <h4><a href="/" rel="external nofollow" className="url">{val.comName}</a></h4>
                                         <span> {val.comDate} </span>
                                     </div>
                                     <span className="reply">
-                                        <a className="comment-reply-link" href="#"><i className="icofont-reply-all"></i>{val.comBtnText}</a>
+                                        <a className="comment-reply-link" href="/"><i className="icofont-reply-all"></i>{val.comBtnText}</a>
                                     </span>
                                 </div>
                                 <p>{val.comDesc}</p>
@@ -55,6 +55,6 @@ class CommentSection extends Component {
             </div>
         );
     }
-}
+
 
 export default CommentSection;

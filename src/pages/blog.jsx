@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
@@ -11,8 +11,7 @@ import FilterSearchSection from '../component/section/filtersearch';
 import WidgetLikeSection from '../component/section/widgetlike';
 import WidgetGroupSection from '../component/section/widgetgroup';
 
-class BlogPage extends Component {
-    render() {
+function BlogPage() {
         return (
             <div>
                 <Header />
@@ -186,6 +185,6 @@ class BlogPage extends Component {
             </div>
         );
     }
-}
+
 
 export default BlogPage;

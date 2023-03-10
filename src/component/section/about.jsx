@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import SectionHeader from './sectionheader';
 
 const subtitle= <h4>About Our Turulav</h4>;
@@ -33,9 +33,9 @@ let AboutContentList = [
 ]
 
 
-class AboutSection extends Component {
-    state = {  } 
-    render() { 
+function AboutSection () {
+    // state = {  } 
+    const [state, setState] = useState({});
         return (
             <section className="about-section padding-tb bg-img">
                 <div className="container">
@@ -70,6 +70,6 @@ class AboutSection extends Component {
             </section>
         );
     }
-}
+
  
 export default AboutSection;

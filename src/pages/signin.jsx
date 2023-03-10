@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
@@ -6,18 +6,34 @@ import FooterSection from '../component/layout/footer';
 
 const title = "Register Now";
 
-class SignInPage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            regName: '',
-            regEmail: '',
-            regPassword: '',
-            regConPassword: '',
-        };
-    }
-
-    render() {
+function SignInPage () {
+    const [regName, setRegName] = useState('');
+    const [regEmail, setRegEmail] = useState('');
+    const [regPassword, setRegPassword] = useState('');
+    const [regConPassword, setRegConPassword] = useState('');
+  
+    const handleRegNameChange = (event) => {
+      setRegName(event.target.value);
+    };
+  
+    const handleRegEmailChange = (event) => {
+      setRegEmail(event.target.value);
+    };
+  
+    const handleRegPasswordChange = (event) => {
+      setRegPassword(event.target.value);
+    };
+  
+    const handleRegConPasswordChange = (event) => {
+      setRegConPassword(event.target.value);
+    };
+  
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      // handle form submission
+    };
+  
+    
         return (
             <div>
                 <Header />
@@ -26,14 +42,14 @@ class SignInPage extends Component {
                     <div className="container">
                         <div className="account-wrapper">
                             <h3 className="title">{title}</h3>
-                            <form className="account-form">
+                            <form className="account-form" onSubmit={handleSubmit}>
                                 <div className="form-group">
                                     <input
                                         type="text"
                                         name="name"
                                         id="item01"
-                                        value={this.state.regName}
-                                        onChange={(e) => { this.setState({ regName: e.target.value }); }}
+                                        value={regName}
+                                        onChange={handleRegNameChange}
                                         placeholder="Your Name *"
                                     />
                                 </div>
@@ -42,8 +58,8 @@ class SignInPage extends Component {
                                         type="text"
                                         name="email"
                                         id="item02"
-                                        value={this.state.regEmail}
-                                        onChange={(e) => { this.setState({ regEmail: e.target.value }); }}
+                                        value={regEmail}
+                                        onChange={handleRegEmailChange}
                                         placeholder="Your email *"
                                     />
                                 </div>
@@ -52,8 +68,8 @@ class SignInPage extends Component {
                                         type="password"
                                         name="password"
                                         id="item03"
-                                        value={this.state.regPassword}
-                                        onChange={(e) => { this.setState({ regPassword: e.target.value }); }}
+                                        value={regPassword}
+                                        onChange={handleRegPasswordChange}
                                         placeholder="Password *"
                                     />
                                 </div>
@@ -62,8 +78,8 @@ class SignInPage extends Component {
                                         type="password"
                                         name="conpassword"
                                         id="item04"
-                                        value={this.state.regConPassword}
-                                        onChange={(e) => { this.setState({ regConPassword: e.target.value }); }}
+                                        value={regConPassword}
+                                        onChange={handleRegConPasswordChange}
                                         placeholder="Confirm Password *"
                                     />
                                 </div>
@@ -100,6 +116,6 @@ class SignInPage extends Component {
             </div>
         );
     }
-}
+
 
 export default SignInPage;

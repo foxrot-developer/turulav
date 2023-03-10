@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import GroupItem from '../items/groupitems';
 
 const subtitle = "Recently Active Groups";
 const title = "Turulav 4 Best Active Group";
 
-class GroupSection extends Component {
-    render() { 
+function GroupSection () {
+   
         return (
             <section className="group-section padding-tb bg-img">
                 <div className="container">
@@ -22,6 +22,6 @@ class GroupSection extends Component {
             </section>
         );
     }
-}
+
  
 export default GroupSection;

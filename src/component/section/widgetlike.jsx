@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class WidgetLikeSection extends Component {
-    render() {
+function WidgetLikeSection (){
         return (
             <div className="widget like-member">
                 <div className="widget-inner">
@@ -12,7 +11,7 @@ class WidgetLikeSection extends Component {
                         <div className="row row-cols-3 row-cols-sm-auto g-3">
                             <div className="col">
                                 <div className="image-thumb">
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="assets/images/widget/01.jpg"
                                             alt="img" />
                                     </a>
@@ -20,7 +19,7 @@ class WidgetLikeSection extends Component {
                             </div>
                             <div className="col">
                                 <div className="image-thumb">
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="assets/images/widget/02.jpg"
                                             alt="img" />
                                     </a>
@@ -28,7 +27,7 @@ class WidgetLikeSection extends Component {
                             </div>
                             <div className="col">
                                 <div className="image-thumb">
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="assets/images/widget/03.jpg"
                                             alt="img" />
                                     </a>
@@ -36,7 +35,7 @@ class WidgetLikeSection extends Component {
                             </div>
                             <div className="col">
                                 <div className="image-thumb">
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="assets/images/widget/04.jpg"
                                             alt="img" />
                                     </a>
@@ -44,7 +43,7 @@ class WidgetLikeSection extends Component {
                             </div>
                             <div className="col">
                                 <div className="image-thumb">
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="assets/images/widget/05.jpg"
                                             alt="img" />
                                     </a>
@@ -52,7 +51,7 @@ class WidgetLikeSection extends Component {
                             </div>
                             <div className="col">
                                 <div className="image-thumb">
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="assets/images/widget/06.jpg"
                                             alt="img" />
                                     </a>
@@ -60,7 +59,7 @@ class WidgetLikeSection extends Component {
                             </div>
                             <div className="col">
                                 <div className="image-thumb">
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="assets/images/widget/07.jpg"
                                             alt="img" />
                                     </a>
@@ -68,7 +67,7 @@ class WidgetLikeSection extends Component {
                             </div>
                             <div className="col">
                                 <div className="image-thumb">
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="assets/images/widget/08.jpg"
                                             alt="img" />
                                     </a>
@@ -76,7 +75,7 @@ class WidgetLikeSection extends Component {
                             </div>
                             <div className="col">
                                 <div className="image-thumb">
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="assets/images/widget/09.jpg"
                                             alt="img" />
                                     </a>
@@ -88,6 +87,6 @@ class WidgetLikeSection extends Component {
             </div>
         );
     }
-}
+
 
 export default WidgetLikeSection;

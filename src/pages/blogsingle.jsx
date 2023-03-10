@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from '../component/layout/header';
 import PageHeader from '../component/layout/pageheader';
 import FooterSection from '../component/layout/footer';
@@ -8,8 +8,7 @@ import WidgetGroupSection from '../component/section/widgetgroup';
 import CommentSection from '../component/section/comments';
 import CommentRespond from '../component/section/commentrespond';
 
-class BlogSinglePage extends Component {
-    render() {
+function BlogSinglePage ( ){
         return (
             <div>
                 <Header />
@@ -26,7 +25,7 @@ class BlogSinglePage extends Component {
                                                     <img src="assets/images/blog/03.jpg" alt="blog" />
                                                 </div>
                                                 <div className="post-content">
-                                                    <span className="meta">By <a href="#">Admin</a> March 24, 2021</span>
+                                                    <span className="meta">By <a href="/">Admin</a> March 24, 2021</span>
                                                     <h3>A wonderf serenity has taken poesion of my entire souin like these sweet
                                                         mornins</h3>
                                                     <p>A wonderf serenity has taken poesion of my entire souin like these sweet
@@ -71,16 +70,16 @@ class BlogSinglePage extends Component {
                                                 <div className="tags-section">
                                                     <ul className="tags">
                                                         <li><span><i className="icofont-tags"></i></span></li>
-                                                        <li><a href="#">Dantal</a></li>
-                                                        <li><a href="#">Health Care</a></li>
-                                                        <li><a href="#">Company</a></li>
-                                                        <li><a href="#">Corporate</a></li>
+                                                        <li><a href="/">Dantal</a></li>
+                                                        <li><a href="/">Health Care</a></li>
+                                                        <li><a href="/">Company</a></li>
+                                                        <li><a href="/">Corporate</a></li>
                                                     </ul>
                                                     <ul className="social-link-list d-flex flex-wrap">
-                                                        <li><a href="#" className="facebook"><i className="icofont-facebook"></i></a></li>
-                                                        <li><a href="#" className="dribble"><i className="icofont-dribble"></i></a></li>
-                                                        <li><a href="#" className="twitter"><i className="icofont-twitter"></i></a></li>
-                                                        <li><a href="#" className="linkedin"><i className="icofont-linkedin"></i></a></li>
+                                                        <li><a href="/" className="facebook"><i className="icofont-facebook"></i></a></li>
+                                                        <li><a href="/" className="dribble"><i className="icofont-dribble"></i></a></li>
+                                                        <li><a href="/" className="twitter"><i className="icofont-twitter"></i></a></li>
+                                                        <li><a href="/" className="linkedin"><i className="icofont-linkedin"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -104,6 +103,6 @@ class BlogSinglePage extends Component {
             </div>
         );
     }
-}
+
 
 export default BlogSinglePage;

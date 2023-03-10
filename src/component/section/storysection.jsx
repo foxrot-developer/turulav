@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const subtitle= "Love in Faith Success Stories";
@@ -29,9 +29,9 @@ let StoryContentList = [
 ]
 
 
-class StorySection extends Component {
-    state = {  } 
-    render() { 
+function StorySection () {
+    
+    
         return (
             <section className="story-section padding-tb bg-img">
                 <div className=" container">
@@ -66,6 +66,6 @@ class StorySection extends Component {
             </section>
         );
     }
-}
+
  
 export default StorySection;

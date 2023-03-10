@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SectionHeader extends Component {
-    render() {
+function SectionHeader (props){
+
         return (
-            <div className={ ( this.props.alignment ? this.props.alignment : "") }>
-               { this.props.title }
-                { this.props.subtitle }
+            <div className={ ( props.alignment ? props.alignment : "") }>
+               { props.title }
+                { props.subtitle }
             </div>
         )
     }
-}
+
 
 export default SectionHeader;
