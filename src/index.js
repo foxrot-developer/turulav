@@ -1,13 +1,56 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import '././assets/css/style.css';
+import '././assets/css/animate.css';
+import '././assets/css/icofont.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
+import UserReducer from './store/user/reducers/UserReducer';
+
+const { persistStore, persistReducer } = require('redux-persist');
+
+const rootReducer = combineReducers({
+  user: UserReducer
+});
+
+let devtools, store;
+const isClient = typeof window !== 'undefined';
+if (isClient) {
+  devtools =
+    window.__REDUX_DEVTOOLS_EXTENSION__
+      ? window.__REDUX_DEVTOOLS_EXTENSION__()
+      : (f) => f;
+
+  const storage = require('redux-persist/lib/storage').default;
+  const persistConfig = {
+    key: 'turulav',
+    storage,
+  };
+
+  store = createStore(
+    persistReducer(persistConfig, rootReducer),
+    compose(applyMiddleware(thunk), devtools)
+  );
+
+  store.__PERSISTOR = persistStore(store);
+} else {
+  store = createStore(rootReducer, compose(applyMiddleware(thunk)));
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
